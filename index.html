@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wisata Skyland - Nikmati Keindahan Alam dari Ketinggian</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: { "primary": "#006591", "secondary": "#6b38d4", "surface": "#faf8ff", "on-surface": "#131b2e", "background": "#faf8ff", "on-background": "#131b2e", "primary-container": "#0ea5e9", "surface-container-low": "#f2f3ff", "surface-container": "#eaedff", "surface-bright": "#faf8ff", "on-surface-variant": "#3e4850", "outline-variant": "#bec8d2", "on-primary": "#ffffff", "on-secondary": "#ffffff" },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: { "section-padding": "120px", "stack-md": "32px", "gutter": "24px", "stack-sm": "16px", "stack-lg": "64px" },
+          fontFamily: { "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Noto Serif"], "headline-lg": ["Noto Serif"], "display-xl": ["Noto Serif"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] },
+          fontSize: { "body-lg": ["18px", { lineHeight: "1.6" }], "headline-md": ["32px", { lineHeight: "1.3" }], "headline-lg": ["48px", { lineHeight: "1.2" }], "display-xl": ["72px", { lineHeight: "1.1" }], "body-md": ["16px", { lineHeight: "1.5" }], "label-sm": ["14px", { lineHeight: "1.2" }] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-panel { background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.2); }
+    .cinematic-vignette { background: linear-gradient(to bottom, rgba(19,27,46,0.4) 0%, transparent 40%, transparent 60%, rgba(19,27,46,0.8) 100%); }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+
+  <!-- Navbar (sama seperti sebelumnya) -->
+  <nav class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-8 flex justify-between items-center h-20">
+      <div class="text-2xl font-bold tracking-tighter text-sky-900 uppercase">Skyland</div>
+      <div class="hidden md:flex items-center gap-8 font-serif tracking-tight text-sm uppercase">
+        <a class="text-slate-700 hover:text-sky-500 transition-colors" href="#gallery">Gallery</a>
+        <a class="text-slate-700 hover:text-sky-500 transition-colors" href="#facilities">Facilities</a>
+        <a class="text-slate-700 hover:text-sky-500 transition-colors" href="#tickets">Tickets</a>
+        <a class="text-slate-700 hover:text-sky-500 transition-colors" href="#location">Location</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="flex gap-2 text-sky-500">
+          <span class="material-symbols-outlined cursor-pointer hover:scale-95" data-icon="map">map</span>
+          <span class="material-symbols-outlined cursor-pointer hover:scale-95" data-icon="info">info</span>
+        </div>
+        <button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-sm hover:bg-surface-tint transition-all active:scale-95">Book Now</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover" alt="Pemandangan matahari terbenam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-8GynfLPQssxftoITqr2rntlrs0gAd7_dzcZIlAmww1KyNWZUoIwYYwj0Pqnh5XG9bzDd82FACj1A7LYPwhV61E4GJm7RMCA34kvRJ09NkQtyBCuJviP6jRDrGiGTWiHCE9yWUdp7L9ScZ4W1yGYD5hhD18H8qLXTPdvo7V5fMrGOyzxIDksiOrDSeJhvOrSS-W3DO-aPCZ97JUPqqKnDVPmn55WejokoGZLH4iE5ZBLDh8E6dQUBDVQIH5QezhPxro7gWfnjfh8">
+      <div class="absolute inset-0 cinematic-vignette"></div>
+    </div>
+      <h1 class="font-display-xl text-display-xl text-white mb-4 drop-shadow-2xl">Wisata Skyland</h1>
+      <p class="font-headline-md text-headline-md text-white/90 mb-8 italic">Nikmati Keindahan Alam dari Ketinggian</p>
+      <a class="inline-block bg-white/20 backdrop-blur-lg border border-white/40 text-white px-10 py-4 rounded-full font-label-sm hover:bg-white hover:text-primary transition-all duration-500 group" href="#gallery">Jelajahi Sekarang <span class="material-symbols-outlined align-middle ml-2 group-hover:translate-x-1">arrow_forward</span></a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-section-padding bg-surface" id="about">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <span class="text-secondary font-label-sm uppercase tracking-widest">Ethereal Experience</span>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface">Puncak Estetika Di Atas Awan</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">Wisata Skyland menghadirkan harmoni antara modernitas dan alam. Terletak di dataran tinggi, kami menawarkan pemandangan 360 derajat yang berkilauan di malam hari serta gradasi sunset yang memukau setiap sorenya.</p>
+        <div class="flex gap-4 pt-4">
+          <div class="flex flex-col items-center p-4 bg-surface-container rounded-xl cursor-pointer transition hover:shadow-lg" id="instagramModeBtn">
+            <span class="material-symbols-outlined text-primary mb-2 text-4xl">auto_awesome</span>
+            <span class="font-label-sm">Instagramable</span>
+          </div>
+          <div class="flex flex-col items-center p-4 bg-surface-container rounded-xl cursor-pointer transition hover:shadow-lg" id="cityLightsBtn">
+            <span class="material-symbols-outlined text-primary mb-2 text-4xl">nights_stay</span>
+            <span class="font-label-sm">City Lights</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+        <img class="w-full h-full object-cover cursor-pointer" alt="The natural beauty of God's creation" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80">">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Bento Grid - SEMUA GAMBAR ONLINE, PASTI MUNCUL -->
+  <section class="py-section-padding bg-surface-container-low" id="gallery">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-headline-lg text-headline-lg mb-4">Momen Tak Terlupakan</h2>
+        <div class="w-24 h-1 bg-primary mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[800px]">
+
+        <!-- Sky Bridge View -->
+        <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" alt="See Beautiful Views" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgmM5mTsn-ch_LldjiEiaWSqe-Nili-JOSEe1QedKRc9y0dh26HbgiEf63gmF_oug-FrT10ksBlRxA2NRv5iNpNIxSDS5WD3Nqm8rSLRHoJPHUVmxGRCF8Yb5-ao2KQkar4dvpqOALP54_zUvX0VbmryGVfkXoMQCvgD_IZy7sKSm0vMpscjYDnAQDONrI1w-9fE5iE_SZUcRYW1VfvQAldieqpgcc2siMHUmh7U2HK76TQsuhy_FFLQETA7vSZxEmS6k-MgeQXtk">
+            <p class="text-white font-headline-md">Sky Bridge View</p>
+        </div>
+
+        <!-- Twilight Terrace -->
+        <div class="md:col-span-2 relative group overflow-hidden rounded-2xl">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" alt="Twilight Terrace" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&q=80">
+            <p class="text-white font-headline-md">Twilight Terrace</p>
+          </div>
+
+        <!-- Indahnya Bunga Malang (pengganti foto lokal Anda, agar pasti muncul) -->
+        <div class="relative group overflow-hidden rounded-2xl">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" alt="See the beauty of flowers" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200&q=80">
+        </div>
+
+        <!-- Langit malam bintang -->
+        <div class="relative group overflow-hidden rounded-2xl">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" alt="Looking at the stars in the night sky" src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities (sama) -->
+  <section class="py-section-padding bg-surface-bright" id="facilities">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="glass-panel p-10 rounded-3xl text-center hover:-translate-y-2 transition-transform bg-white/40 cursor-pointer" data-facility="parking">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-4xl">local_parking</span>
+          </div>
+          <h3 class="font-headline-md text-xl mb-2">Parking</h3>
+          <p class="text-on-surface-variant text-sm">Area parkir luas dan aman untuk kendaraan pribadi maupun bus wisata.</p>
+        </div>
+        <div class="glass-panel p-10 rounded-3xl text-center hover:-translate-y-2 transition-transform bg-white/40 cursor-pointer" data-facility="cafe">
+          <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-4xl">restaurant</span>
+          </div>
+          <h3 class="font-headline-md text-xl mb-2">Cafe/Dining</h3>
+          <p class="text-on-surface-variant text-sm">Nikmati hidangan premium dengan pemandangan kota Jabar yang indah.</p>
+        </div>
+        <div class="glass-panel p-10 rounded-3xl text-center hover:-translate-y-2 transition-transform bg-white/40 cursor-pointer" data-facility="photospot">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-4xl">camera_alt</span>
+          </div>
+          <h3 class="font-headline-md text-xl mb-2">Photo Spots</h3>
+          <p class="text-on-surface-variant text-sm">Berbagai spot foto ikonik yang didesain secara estetis dan artistik.</p>
+        </div>
+        <div class="glass-panel p-10 rounded-3xl text-center hover:-translate-y-2 transition-transform bg-white/40 cursor-pointer" data-facility="relax">
+          <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-4xl">park</span>
+          </div>
+          <h3 class="font-headline-md text-xl mb-2">Relax Areas</h3>
+          <p class="text-on-surface-variant text-sm">Taman dan area santai untuk melepas penat di tengah udara yang sejuk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tickets & Hours -->
+  <section class="py-section-padding bg-surface-container" id="tickets">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="bg-white rounded-[2rem] shadow-xl overflow-hidden flex flex-col md:flex-row">
+        <div class="bg-primary p-12 text-white md:w-1/2 flex flex-col justify-center">
+          <h2 class="font-headline-lg text-headline-lg mb-6">Tickets &amp; Hours</h2>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4"><span class="material-symbols-outlined">schedule</span>
+              <div><p class="font-label-sm uppercase">Operational Hours</p>
+              <p class="text-2xl font-serif">10:00 - 22:00 WIB</p>
+              <p class="text-sm opacity-80">Buka setiap hari (Weekday &amp; Weekend)</p>
+            </div>
+          </div>
+            <div class="flex items-start gap-4"><span class="material-symbols-outlined">confirmation_number</span>
+              <div>
+                <p class="font-label-sm uppercase">Admission (HTM)</p>
+                <p class="text-2xl font-serif">Rp 700.000 / Person</p>
+                <p class="text-sm opacity-80">*Harga dapat berubah sewaktu-waktu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-12 md:w-1/2 bg-white">
+          <h3 class="font-headline-md mb-6">Booking Info</h3>
+          <form id="bookingForm" class="space-y-4">
+            <div>
+              <label class="block font-label-sm mb-2 uppercase text-xs">Full Name</label><input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2" type="text" id="bookingName" required></div>
+            <div>
+              <label class="block font-label-sm mb-2 uppercase text-xs">Arrival Date</label><input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2" type="date" id="bookingDate" required></div>
+            <button type="submit" class="w-full bg-secondary text-on-secondary py-4 rounded-xl font-label-sm uppercase tracking-widest hover:bg-secondary-container transition-all">Check Availability</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location - GOOGLE MAPS IFRAME (PASTI MUNCUL) -->
+  <section class="py-section-padding bg-surface" id="location">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="md:w-1/3">
+          <h2 class="font-headline-lg text-headline-lg mb-6">Silahkan Ke Lokasi Kami Yang Sudah Kami Sediakan.</h2>
+          <p class="font-body-lg text-on-surface-variant mb-6">Terletak di lereng gunung dengan akses yang mudah dari pusat kota Jabar. Ikuti rute menuju dataran tinggi untuk pengalaman terbaik.</p>
+          <div class="flex items-center gap-3 text-primary cursor-pointer group" id="openMapBtn">
+            <span class="material-symbols-outlined">pin_drop</span>
+            <span class="font-label-sm group-hover:underline">Jakbar, Superland Mall Cikampek, Indonesia.</span>
+          </div>
+        </div>
+        <div class="md:w-2/3 w-full h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
+          <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.123456!2d107.4453714!3d-6.4006863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6973c429e09cb3%3A0x64eadd6b2eb7495f!2sSuperland%20Mall%20Cikampek!5e0!3m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta Cikampek Skyland"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer & Floating WA (sama seperti sebelumnya) -->
+  <footer class="bg-slate-50 w-full border-t border-slate-200">
+    <div class="max-w-7xl mx-auto py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex flex-col gap-4">
+        <div class="text-lg font-bold text-sky-900 uppercase">Jabar Skyland</div>
+        <p class="font-sans text-xs text-slate-500">© 2026 Cikampek Skyland. All rights reserved.</p>
+      <div class="flex gap-4">
+         <p class="font-sans text-xs text-slate-400 mt-2">Dibuat oleh <strong>Kelompok 1:</strong> Adli, Ananda, Agung, Aqso,dan Aldimas.</p>
+        <a class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" id="footerPhone" href="#">
+        <span class="material-symbols-outlined">phone</span>
+      </a>
+      <a class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all" id="footerIg" href="#">
+          <span class="material-symbols-outlined">photo_camera</span>
+        </a>
+        </div>
+      </div>
+      <div class="flex gap-8 font-sans text-xs">
+        <a class="text-slate-500 hover:underline" href="#" id="footerAbout">About Us</a>
+        <a class="text-slate-500 hover:underline" href="#" id="footerTerms">Terms of Service</a><a class="text-slate-500 hover:underline" href="#" id="footerPrivacy">Privacy Policy</a>
+        <a class="text-slate-500 hover:underline" href="#" id="footerSupport">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+  <div class="fixed bottom-8 right-8 z-50">
+    <a class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" href="#" id="whatsappFloat">
+    <span class="material-symbols-outlined">chat</span>
+  </a>
+</div>
+
+  <script>
+    (function() {
+      const bookBtn = document.querySelector(".bg-primary.text-on-primary");
+      const mapIcon = document.querySelector('[data-icon="map"]');
+      const infoIcon = document.querySelector('[data-icon="info"]');
+      const exploreBtn = document.querySelector('a[href="#gallery"]');
+      if(bookBtn) bookBtn.onclick = () => document.getElementById("tickets").scrollIntoView({ behavior: "smooth" });
+      if(mapIcon) mapIcon.onclick = () => document.getElementById("location").scrollIntoView({ behavior: "smooth" });
+      if(infoIcon) infoIcon.onclick = () => document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+      if(exploreBtn) exploreBtn.onclick = (e) => { e.preventDefault(); document.getElementById("gallery").scrollIntoView({ behavior: "smooth" }); };
+      window.addEventListener("scroll", () => { const nav = document.querySelector("nav"); if(window.scrollY > 50) nav.style.background = "rgba(255,255,255,0.95)"; else nav.style.background = "rgba(255,255,255,0.1)"; });
+      
+      function showToast(text, duration=2500) { let t=document.createElement("div"); t.innerText=text; t.style.cssText=`position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:#111827; color:white; padding:14px 25px; border-radius:999px; z-index:999999; font-size:14px; box-shadow:0 10px 30px rgba(0,0,0,.4); animation:fadeIn .3s ease;`; document.body.appendChild(t); setTimeout(()=>t.remove(),duration); }
+      
+      function openImagePopup(src, title="Cikampek Skyland") {
+        const existing = document.getElementById("imgPopup");
+        if(existing) existing.remove();
+        const div = document.createElement("div");
+        div.id = "imgPopup";
+        div.style.cssText = `position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.95); z-index:999999; display:flex; justify-content:center; align-items:center; padding:20px; backdrop-filter:blur(8px); animation:fadeIn .3s ease;`;
+        div.innerHTML = `<button onclick="window.closeImagePopup()" style="position:absolute; top:20px; right:25px; font-size:40px; background:none; border:none; color:white; cursor:pointer; z-index:10;">✖</button><div style="max-width:1000px; width:100%; text-align:center;"><img src="${src}" style="width:100%; max-height:85vh; object-fit:contain; border-radius:20px; box-shadow:0 0 40px rgba(0,0,0,.5); animation:zoomIn .4s ease;"><h2 style="color:white; margin-top:20px; font-size:28px;">${title}</h2></div>`;
+        document.body.appendChild(div);
+      }
+      window.closeImagePopup = () => { const el = document.getElementById("imgPopup"); if(el) el.remove(); };
+      document.querySelectorAll("img").forEach(img => { img.style.cursor = "pointer"; img.addEventListener("click", (e) => { e.stopPropagation(); openImagePopup(img.src, img.alt || "Cikampek Skyland"); }); });
+      
+      function resetToDefault() { document.body.style.background = ""; document.body.style.filter = ""; document.body.style.color = ""; document.querySelectorAll("section").forEach(sec => sec.style.background = ""); document.querySelectorAll("h1,h2,h3,p,a,span,div").forEach(el => { if(!el.closest('footer')) el.style.color = ""; }); document.querySelectorAll("img").forEach(img => img.style.filter = ""); }
+      let instagramActive=false, cityActive=false;
+      const instaBtn = document.getElementById("instagramModeBtn");
+      if(instaBtn) instaBtn.onclick = () => { if(instagramActive) { resetToDefault(); instagramActive=false; showToast("✨ Mode Instagramable dinonaktifkan"); } else { if(cityActive) { cityActive=false; resetToDefault(); } resetToDefault(); document.body.style.transition="1s"; document.body.style.filter="saturate(1.25) contrast(1.08)"; document.querySelectorAll("img").forEach(img=>img.style.filter="saturate(1.3) contrast(1.1)"); instagramActive=true; showToast("✨ Mode Instagramable Aktif"); } };
+      const cityBtn = document.getElementById("cityLightsBtn");
+      if(cityBtn) cityBtn.onclick = () => { if(cityActive) { resetToDefault(); cityActive=false; showToast("🌃 Mode City Lights dinonaktifkan, kembali putih"); } else { if(instagramActive) { instagramActive=false; resetToDefault(); } resetToDefault(); document.body.style.background="#020617"; document.body.style.color="white"; document.querySelectorAll("section").forEach(sec=>sec.style.background="linear-gradient(to bottom,#020617,#0f172a)"); document.querySelectorAll("h1,h2,h3,p,a,span,div").forEach(el=>{ if(!el.closest('footer')) el.style.color="white"; }); document.querySelectorAll("img").forEach(img=>img.style.filter="brightness(.85) contrast(1.15) saturate(1.2)"); cityActive=true; showToast("🌃 Mode City Lights Aktif (klik lagi kembali putih)"); } };
+      
+      function showFacilityPopup(title, htmlContent) { const existing = document.getElementById("popupBox"); if(existing) existing.remove(); const div = document.createElement("div"); div.id = "popupBox"; div.style.cssText = `position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.85); z-index:99999; display:flex; justify-content:center; align-items:center; padding:20px;`; div.innerHTML = `<div style="background:#fff; width:95%; max-width:750px; max-height:95%; overflow:auto; border-radius:20px; padding:20px; position:relative; animation:zoomIn .3s ease;"><button onclick="window.closeFacilityPopup()" style="position:absolute; top:10px; right:15px; font-size:30px; border:none; background:none; cursor:pointer;">✖</button><h2 style="font-size:28px; margin-bottom:15px;">${title}</h2>${htmlContent}</div>`; document.body.appendChild(div); }
+      window.closeFacilityPopup = () => { const p = document.getElementById("popupBox"); if(p) p.remove(); };
+      const facMap = { parking: { title:"Area Parking", html:`<img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=900" style="width:100%; border-radius:15px;"><p><br>✔ Area parkir luas untuk mobil, motor, bus wisata.<br>✔ CCTV & keamanan 24 jam.<br>✔ Kapasitas ± 300 kendaraan.</p>` }, cafe: { title:"Cafe & Dining", html:`<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900" style="width:100%; border-radius:15px;"><div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:15px;"><div><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500" style="width:100%; border-radius:10px;"><p>Kopi Premium - Rp25K</p></div><div><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500" style="width:100%; border-radius:10px;"><p>Nasi Goreng - Rp30K</p></div><div><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500" style="width:100%; border-radius:10px;"><p>Salad - Rp28K</p></div><div><img src="https://images.unsplash.com/photo-1464306076886-da185f6a9d05?w=500" style="width:100%; border-radius:10px;"><p>Ice Drink - Rp20K</p></div></div><p><br>📍 Lokasi tengah area dengan city light view.</p>` }, photospot: { title:"Photo Spots", html:`<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=500" style="width:100%; border-radius:15px;"><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=500" style="width:100%; border-radius:15px;"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=500" style="width:100%; border-radius:15px;"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500" style="width:100%; border-radius:15px;"></div><p><br>📍 Sky Bridge | Spot Sunset | Balkon Awan | Taman Lampu</p>` }, relax: { title:"Relax Areas", html:`<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500" style="width:100%; border-radius:15px;"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=500" style="width:100%; border-radius:15px;"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500" style="width:100%; border-radius:15px;"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=500" style="width:100%; border-radius:15px;"></div><p><br>✔ Gazebo Santai ✔ Kursi Panorama ✔ Area Rumput Hijau ✔ Hammock Santai</p>` } };
+      const panels = document.querySelectorAll("#facilities .glass-panel");
+      if(panels.length>=4){ panels[0].onclick=()=>showFacilityPopup(facMap.parking.title,facMap.parking.html); panels[1].onclick=()=>showFacilityPopup(facMap.cafe.title,facMap.cafe.html); panels[2].onclick=()=>showFacilityPopup(facMap.photospot.title,facMap.photospot.html); panels[3].onclick=()=>showFacilityPopup(facMap.relax.title,facMap.relax.html); }
+      
+      const form = document.getElementById("bookingForm");
+      if(form) form.onsubmit = (e) => { e.preventDefault(); const name = document.getElementById("bookingName").value.trim(); const date = document.getElementById("bookingDate").value; if(!name||!date){ showToast("Isi nama dan tanggal dulu!"); return; } showToast(`✅ Booking terima untuk ${name} pada ${date}`); form.reset(); window.open("https://www.traveloka.com/","_blank"); };
+      
+      const openMapHandler = () => window.open("https://www.google.com/maps/search/Superland+Mall+Cikampek+Jawa+Barat","_blank");
+      const locMap = document.querySelector("#location iframe");
+      const openMapText = document.getElementById("openMapBtn");
+      if(locMap) locMap.onclick = openMapHandler;
+      if(openMapText) openMapText.onclick = openMapHandler;
+      
+      const fPhone = document.getElementById("footerPhone"), fIg = document.getElementById("footerIg"), wa = document.getElementById("whatsappFloat");
+      const waLink = "https://wa.me/6281234567890", igLink ="https://instagram.com/cikampekskyland" ;
+      if(fPhone) fPhone.href = waLink; if(fIg) fIg.href = igLink; if(wa) wa.href = waLink;
+      document.getElementById("footerAbout").onclick = (e) => { e.preventDefault(); document.getElementById("about").scrollIntoView({behavior:"smooth"}); };
+      document.getElementById("footerTerms").onclick = (e) => { e.preventDefault(); showToast("Ketentuan layanan berlaku."); };
+      document.getElementById("footerPrivacy").onclick = (e) => { e.preventDefault(); showToast("Kebijakan privasi: data Anda aman."); };
+      document.getElementById("footerSupport").onclick = (e) => { e.preventDefault(); window.open(waLink,"_blank"); };
+      
+      const style = document.createElement("style"); style.innerHTML = `@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes zoomIn{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}`;
+      document.head.appendChild(style);
+    })();
+  </script>
+</body>
+</html>
